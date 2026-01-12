@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms in html</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+        form{
+            /* position: relative;
+            top: 230px;
+            left: 230px; */
+            background-color: salmon;
+            border: 1px solid black;
+            height: 330px;
+            width: 420px;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.4rem;
+            gap: 2rem;
+           
+            padding: 2%;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button{
+            width: 120px;
+            height: 30px;
+            background-color: saddlebrown;
+            border-radius: 10px;
+        }   
+        input[type = text]{
+            width: 60%;
+            border-radius: 5px;
+            height: 25px;
+        } 
+         input[type = password]{
+            width: 50%;
+            border-radius: 5px;
+            height: 25px;
+        } 
+    </style>
+
+</head>
+<body>
+    
+    <form action="">
+        <h2>Learning Form</h2>
+        
+        <div>
+        <label for="username">Enter name:</label>
+        <input type="text" id="username">
+        </div>
+
+        <div>
+        <label for="userpassword">Enter password:</label>
+        <input type="password" id = "userpassword">
+        </div>
+        <!-- course -->
+        <div style=" display: grid; grid-template-columns: repeat(3,1fr) ;grid-template-rows: 1fr;">
+        <p>Select Course:</p>
+                
+
+        <div>
+            <label for="fullstack" style="margin-left: 3px;">Full stack</label>
+            <input type="checkbox" id = "fullstack">
+        </div>
+        <div>
+            <label for="aiml" >Ai/Ml</label>
+            <input type="checkbox" id ="aiml">
+        </div>
+        </div>
+        <!-- gender -->
+        <div style="display: flex;">
+            <p>Gender:</p><br>
+            <label for="Male" style="margin-left: 10px; position: relative; ">Male
+                  <input type="radio" name="gender" id = "female" style="position: absolute;left: 49px; top: 7px;">
+            </label>
+          
+            <label for="female" style="margin-left: 25px;">Female</label>
+            <input type="radio" name="gender" id = "female">
+        </div>
+
+
+        <div style="position: relative; left:100px;">
+            <button class="button">cancel</button>
+            <input class = "button" type="submit">
+        </div>
+
+    </form>
+
+</body>
+</html>
