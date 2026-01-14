@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form using grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form{
+        width: 25vw;
+        border: 1px solid black;
+        
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; 
+                row-gap: 1.5rem;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    .label{
+        font-weight: 700;
+    }
+
+
+
+        .flexbox{
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: space-between;
+            width: 100%;
+        }
+        .radio{
+            width: 100%;
+        }
+
+        .btns{
+            width: 100%;
+            /* border: 1px solid black; */
+        }
+
+        /* media queries */
+        @media screen and (min-width:1340px) {
+            .flexbox{
+                width: 70%;
+                flex-direction: row;
+                align-items: center;
+               
+            }
+            .btns{
+                width: 35%;
+            }
+            .radio{
+                width: 50%;
+                flex-direction: row;
+            }
+        }
+        .btns input[type = "submit"],button{
+            padding: 4px 8px;
+            border-radius: 8px ;
+            background-color: saddlebrown;
+            color: white;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <form >
+
+
+        <!-- 1st row -->
+        <div>
+            <label for="usermail" class="label">Enter email: </label>
+            <input type="text" name = "usermail" id = "usermail">
+        </div>
+        <!-- 2nd row -->
+        <div>
+            <label for="usermail" class="label">Enter password: </label>
+            <input type="text" name = "userpass" id = "userpass">
+        </div>
+<!-- 3rd row -->
+        <div class="flexbox">
+            <p class="label">Select Course: </p>
+            <div>
+                <label for="fullstack">Full stack</label>
+                <input type="checkbox" name="fullstack" id="fullstack">
+            </div>
+            <div>
+                <label for="aiml">AI/ML</label>
+                <input type="checkbox" name="aiml" id="aiml">
+            </div>
+            
+        </div>
+        <!-- 4th row -->
+         <div class="flexbox radio">
+            <p class="label">Gender:</p>
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id = "male">
+            </div>
+            <div>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id = "female">
+            </div>
+         </div>
+         <!-- 5th -->
+          <div>
+            <label for="countary" class="label">Select countary:</label>
+            <select name="countary" id="countary">
+                <option value="ind">India</option>
+                <option value="aus">Australia</option>
+                <option value="amr">America</option>
+            </select>
+          </div>
+          <!-- buttons -->
+          <div class="flexbox btns" >
+            <button>Cancel</button>
+            <input type="submit" value="submit">
+          </div>
+        
+
+    </form>
+
+    
+</body>
+</html>

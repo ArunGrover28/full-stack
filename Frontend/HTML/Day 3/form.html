@@ -4,62 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>forms in html</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-
-        }
-        form{
-            /* position: relative;
-            top: 230px;
-            left: 230px; */
-            background-color: salmon;
-            border: 1px solid black;
-            height: 330px;
-            width: 420px;
-            display: flex;
-            flex-direction: column;
-            font-size: 1.4rem;
-            gap: 2rem;
-           
-            padding: 2%;
-        }
-        body{
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .button{
-            width: 120px;
-            height: 30px;
-            background-color: saddlebrown;
-            border-radius: 10px;
-        }   
-        input[type = text]{
-            width: 60%;
-            border-radius: 5px;
-            height: 25px;
-        } 
-         input[type = password]{
-            width: 50%;
-            border-radius: 5px;
-            height: 25px;
-        } 
-    </style>
+   <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
     
-    <form action="">
+    <form >
         <h2>Learning Form</h2>
         
-        <div>
+        <div style="text-align: center;">
         <label for="username">Enter name:</label>
-        <input type="text" id="username">
-        </div>
+        <input type="text" id="username" style="text-transform: lowercase; padding: 3px; box-sizing: border-box;">
+        
 
         <div>
         <label for="userpassword">Enter password:</label>
@@ -81,20 +37,29 @@
         </div>
         <!-- gender -->
         <div style="display: flex;">
-            <p>Gender:</p><br>
+            <p >Gender:</p><br>
             <label for="Male" style="margin-left: 10px; position: relative; ">Male
-                  <input type="radio" name="gender" id = "female" style="position: absolute;left: 49px; top: 7px;">
+                  <input type="radio" name="gender" id = "Male" style="position: absolute;left: 49px; top: 27px;">
             </label>
           
             <label for="female" style="margin-left: 25px;">Female</label>
             <input type="radio" name="gender" id = "female">
         </div>
-
+        <div>
+            <label for="countary">Select Countary: </label>
+            <select name="countary" id="countary">
+                <option value="ind">India</option>
+                <option value="aus">Australia</option>
+                <option value="naz">South africa</option>
+            </select>
+        </div>
 
         <div style="position: relative; left:100px;">
-            <button class="button">cancel</button>
-            <input class = "button" type="submit">
+            <button class="button" style="opacity: 0.8;">cancel</button>
+            <input style="text-decoration: underline;" class = "button" type="submit">
         </div>
+
+        
 
     </form>
 

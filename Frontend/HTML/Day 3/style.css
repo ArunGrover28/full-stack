@@ -1,0 +1,48 @@
+*{
+            padding: 0;
+            margin: 0;
+
+        }
+        form{
+            /* position: relative;
+            top: 230px;
+            left: 230px; */
+            background-color: salmon;
+            border: 1px solid black;
+            height: 390px;
+            width: 420px;
+            /* text-align: left; */
+            line-height: 55px;
+            /* display: flex;
+            flex-direction: column; */
+            font-size: 1.4rem;
+            gap: 2rem;
+            border-radius: 4px;
+            padding: 2%;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button{
+            width: 120px;
+            height: 30px;
+            background-color: saddlebrown;
+            border-radius: 10px;
+        }   
+        input[type = text]{
+            width: 60%;
+            border-radius: 5px;
+            height: 25px;
+        } 
+         input[type = password]{
+            width: 50%;
+            border-radius: 5px;
+            height: 25px;
+        }
+        input[type = submit]{
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
