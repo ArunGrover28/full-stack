@@ -8,7 +8,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body >
 
     <header>
         <div class="left-heading">
@@ -22,11 +22,23 @@
                 <a href="#project">Projects</a>
                 <a href="#contact-section">Contacts</a>
             </nav>
+                
 
-                <img src="public/ahadog.png" alt="" >
-                <!-- <button style="position: absolute; left: 35px; padding: 5px; display: none;">=</button> -->
+                    <img src="public/ahadog.png" alt="" >
+                    <button style="font-size: 1.5rem; background-color: var(--bg-color); border:none" id = "theme-changer">🌖</button>
+                    
+               
+                <button  style="padding: 0rem; align-items: center; justify-content: center; border: none;font-size: 1.5rem;color: white; background-color: rgb(223, 137, 223); border-radius: 50%; width: 50px;height: 50px; font-size: 1rem;" class="nav-btn" id ="nav-btn">&#8942;</button>
         </div>
     </header>
+    <div  id = "nav-show" >
+        <nav style="display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--text-color);">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="#project">Projects</a>
+                <a href="#contact-section">Contacts</a>
+            </nav>
+    </div>
 
 
     <section class="main-content">
@@ -120,6 +132,8 @@
     <footer>
         <p>@Copyright since 2005</p>        
     </footer>
+
+    <script src="index.js"></script>
 
     
 </body>

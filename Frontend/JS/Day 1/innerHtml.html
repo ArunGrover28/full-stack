@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Html vs Inner Text</title>
+</head>
+<body>
+
+    <p id="id">I will get Changed</p>
+    <p id = "demo"> I will get Changed</p>
+    <button onclick="window.print()">Print</button>
+    <script>
+    document.getElementById("id").innerText = '<h1>Inner html</h1>';
+    document.getElementById("demo").innerHTML = '<h1>Inner html</h1>';
+    window.alert("somt")
+
+    // document.getElementById("id").textContent = "someg"
+    </script>
+    <!-- <script>document.getElementById("di").innerHtml = '<h1>Inner html</h1>'</script> -->
+</body>
+</html>

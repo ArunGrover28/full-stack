@@ -1,12 +1,28 @@
+.darkmode{
+    --bg-color: rgb(223, 137, 223);
+    --text-color: white;
+
+}
+
+:root{
+    --bg-color: white;
+    --text-color: rgb(223,137,223);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+
+#nav-show{display: none;}
+#nav-show.show{display: block;}
 body{
     width: 100vw;
     height: 100vh;
+    background-color: var(--bg-color);
 }
 html {
   scroll-behavior: smooth;
@@ -15,7 +31,7 @@ html {
 header{
     position: sticky;
         top: 0;
-    background-color: rgb(223, 137, 223);;
+    background-color: var(--bg-color);
     width: 100%;    
     display: flex;
     justify-content: space-between;
@@ -28,6 +44,7 @@ header{
 .left-heading{
     font-size: 1.6rem;
     cursor: pointer;
+    text-align: center;
     /* border: 1px solid black; */
 }
 
@@ -36,6 +53,7 @@ header{
    /* border: 1px solid black; */
     width: 100%;
     justify-content: space-between;
+   
     /* border: 1px solid black; */
 }
 .right-content nav{
@@ -43,9 +61,6 @@ header{
     justify-content: space-between;
     width: 100%;
     /* border: 1px solid black; */
-}
-@media (width:500){
-
 }
 
 .contact-section{
@@ -76,6 +91,11 @@ form input{
     padding: 0.4rem;
     border-radius: 10px;
 }
+.nav-btn{
+    display: flex;
+
+}
+
 @media (min-width:768px){
     .right-content nav{
         display: flex;
@@ -83,9 +103,12 @@ form input{
       
     }
     .right-content nav{
-    visibility: initial;
-    justify-content: space-between;
-    width: 90%;
+        visibility: initial;
+        justify-content: space-between;
+        width: 90%;
+    }
+    .nav-btn{
+        display: none;
     }
 .right-content{
     display: flex;
@@ -167,12 +190,12 @@ form input{
     border-radius: 50%;
 }
 span{
-    color: rgb(223, 137, 223);
+    color: var(--text-color);
 }
 
 .grid-project{
     
-   display: grid;
+display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   padding: 40px
