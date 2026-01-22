@@ -38,14 +38,13 @@ function executeTrade(action,stockPrice){
             wallet_balance+=stockPrice;
              current_holding--;
         }
-        
     }
 }
 
 while(round<10){
-    const stockPrice = update_price();
-    const action = decide_action(stockPrice);
-    executeTrade(action,stockPrice);
+    const stockPrice = update_price();//101
+    const action = decide_action(stockPrice);//hold
+    executeTrade(action,stockPrice);//trade executed
     console.log(`Round ${round+1}: Stock Price = ${stockPrice}  -> Action = ${action}  -> Balance = ${wallet_balance}  -> Holding = ${current_holding} `)
     round++;
 }
