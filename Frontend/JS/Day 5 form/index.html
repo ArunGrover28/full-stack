@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <script>
+
+        function validate(mail,pass){
+            
+            if(mail === ""  || pass === "" || pass.length <6){
+                return false;
+            }
+            return true;
+        }
+
+        function handleSubmit(){
+    
+            const usermail = document.getElementById("usermail").value;
+            const userpassword = document.getElementById("userpassword").value;
+           
+            if(validate(usermail,userpassword)){
+                alert("form submitted successfully");
+                
+            }else{
+                alert("enter valid input");
+           
+            }
+        }
+       
+
+    </script>
+</head>
+<body>
+
+    <h2>Form validation</h2>
+    <form onsubmit=" handleSubmit()">
+        <label for="usermail">Enter email:</label>
+        <input type="email" id = "usermail" name = "usermail">
+        <label for="userpassword">Enter Password:</label>
+        <input type="password" id = "userpassword" name="userpassword">
+        <button>submit</button>
+    </form>
+    
+</body>
+</html>
